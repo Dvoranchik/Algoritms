@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="BinaryTree">
+      <UniqueIdentifier>{eabc33bd-f719-4fd1-89d7-c8297b8ee851}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Predicats">
+      <UniqueIdentifier>{0e812e28-5b5b-47dc-80ef-88713cebefa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreeVisitor">
+      <UniqueIdentifier>{15961652-6d87-4740-af06-b949235257c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreeNode">
+      <UniqueIdentifier>{77e0d86d-9656-440c-8ed4-a3ccf393b742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreePrinter">
+      <UniqueIdentifier>{6c956da0-dc54-45c6-b74a-e5b64b31f055}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinaryTree\BinaryTree.hpp">
+      <Filter>BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Predicats\Predicats.hpp">
+      <Filter>Predicats</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeVisitor\TreeVisitor.hpp">
+      <Filter>TreeVisitor</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNode\TreeNode.hpp">
+      <Filter>TreeNode</Filter>
+    </ClInclude>
+    <ClInclude Include="TreePrinter\TreePrinter.hpp">
+      <Filter>TreePrinter</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

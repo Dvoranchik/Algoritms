@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sort">
+      <UniqueIdentifier>{29aa98d3-e7a2-45d8-88ef-010019d495ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sort\HeapSortAlgorithm.hpp">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\ISortAlgorithm.hpp">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\MergeSortAlgorithm.hpp">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\QuickSortAlgorithm.hpp">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\ShellSortAlgorithm.hpp">
+      <Filter>Sort</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

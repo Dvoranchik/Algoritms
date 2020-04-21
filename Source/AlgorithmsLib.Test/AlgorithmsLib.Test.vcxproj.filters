@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SourceFiles">
+      <UniqueIdentifier>{0902e640-69ce-4d4e-a7ff-7d336ca1e0f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SortFixture">
+      <UniqueIdentifier>{72c1be43-08e4-4239-88c4-bf162a56baa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BinaryTree.Tests">
+      <UniqueIdentifier>{7d691b41-d158-44da-a791-5c5f9e3b5336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sort.Tests">
+      <UniqueIdentifier>{371afbd9-0445-469f-a9a2-5640d6cfbed5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BinaryTreeFixture">
+      <UniqueIdentifier>{8941a390-54ce-448a-ac9e-370496a497c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SourceFiles\AlgorithmsLib.Test.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort.Tests\SortSpeedTests.cpp">
+      <Filter>Sort.Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort.Tests\SortUnitTests.cpp">
+      <Filter>Sort.Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.Tests\BinaryTreeTest.cpp">
+      <Filter>BinaryTree.Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeFixture\BinaryTreeFixture.cpp">
+      <Filter>BinaryTreeFixture</Filter>
+    </ClCompile>
+    <ClCompile Include="SortFixture\SortUnitTestsFixture.cpp">
+      <Filter>SortFixture</Filter>
+    </ClCompile>
+    <ClCompile Include="SortFixture\SortTypes.cpp">
+      <Filter>SortFixture</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.Tests\VisitorTreeTests.cpp">
+      <Filter>BinaryTree.Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinaryTreeFixture\BinaryTreeFixture.hpp">
+      <Filter>BinaryTreeFixture</Filter>
+    </ClInclude>
+    <ClInclude Include="SortFixture\SortTypes.hpp">
+      <Filter>SortFixture</Filter>
+    </ClInclude>
+    <ClInclude Include="SortFixture\SortFixture.h">
+      <Filter>SortFixture</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

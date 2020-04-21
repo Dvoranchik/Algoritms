@@ -1,0 +1,10 @@
+digraph BST {
+    node [fontname="Arial"];
+    struct0[label="D",color=green];
+    struct1[label="B",color=blue]    struct0 -> struct1;
+    struct2[label="A",color=blue]    struct1 -> struct2;
+    struct3[label="C",color=red]    struct1 -> struct3;
+    struct4[label="F",color=red]    struct0 -> struct4;
+    struct5[label="E",color=blue]    struct4 -> struct5;
+    struct6[label="G",color=red]    struct4 -> struct6;
+}

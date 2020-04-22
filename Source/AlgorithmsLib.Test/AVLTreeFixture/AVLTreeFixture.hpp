@@ -1,23 +1,23 @@
 #pragma once
 #include <gtest/gtest.h>
-#include "../../BinaryTree/BinaryTree/BinaryTree.hpp"
-
+#include "../../AVLTree/AVLTree/AVLTree.hpp"
+#include "../../AVLTree/TreeVisitor/TreeVisitor.hpp"
 
 namespace Borodin {
-	namespace BinaryTree {
+	namespace AVLTree {
 		namespace Fixture {
 			// The fixture for testing class Foo.
-			class BinaryTreeFixture : public ::testing::Test {
+			class AVLTreeFixture : public ::testing::Test {
 
 			protected:
 				// You can remove any or all of the following functions if their bodies would
 				// be empty.
 
-				BinaryTreeFixture() {
+				AVLTreeFixture() {
 					// You can do set-up work for each test here.
 				}
 
-				~BinaryTreeFixture() override {
+				~AVLTreeFixture() override {
 					// You can do clean-up work that doesn't throw exceptions here.
 				}
 
@@ -34,11 +34,11 @@ namespace Borodin {
 					// before the destructor).
 				}
 
-				BinaryTree<int> Initialization123();
-				BinaryTree<int> Initialization231();
-				BinaryTree<int> Initialization5324971869();
-				BinaryTree<char> Initialization_fidsadhysdl();
-				BinaryTree<int>* Initialization532497186();
+				AVLTree<int> Initialization123();
+				AVLTree<int> Initialization231();
+				AVLTree<int> Initialization5324971869();
+				AVLTree<char> Initialization_fidsadhysdl();
+				AVLTree<int>* Initialization532497186();
 
 				std::string ExpectedResultGraphviz123();
 				std::string ExpectedResultGraphviz231();

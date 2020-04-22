@@ -16,6 +16,12 @@
     <Filter Include="BinaryTreeFixture">
       <UniqueIdentifier>{8941a390-54ce-448a-ac9e-370496a497c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AVLTreeFixture">
+      <UniqueIdentifier>{c60b84a9-38c6-43a2-a114-399110670552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AVLTree.Tests">
+      <UniqueIdentifier>{3c4dadb6-cc72-4035-9e92-c9fc93b27d01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceFiles\AlgorithmsLib.Test.cpp">
@@ -42,6 +48,15 @@
     <ClCompile Include="BinaryTree.Tests\VisitorTreeTests.cpp">
       <Filter>BinaryTree.Tests</Filter>
     </ClCompile>
+    <ClCompile Include="AVLTreeFixture\AVLTreeFixture.cpp">
+      <Filter>AVLTreeFixture</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLTree.Tests\AVLTreeTests.cpp">
+      <Filter>AVLTree.Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLTree.Tests\VisitorAVLTreeTests.cpp">
+      <Filter>AVLTree.Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTreeFixture\BinaryTreeFixture.hpp">
@@ -52,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="SortFixture\SortFixture.h">
       <Filter>SortFixture</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLTreeFixture\AVLTreeFixture.hpp">
+      <Filter>AVLTreeFixture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

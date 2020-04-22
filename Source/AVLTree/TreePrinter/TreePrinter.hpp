@@ -19,8 +19,7 @@ namespace Borodin {
                 if (binNode->left != nullptr)
                 {
                     ++h;
-                    dictonary[binNode->left->data]++;
-                    os << "    " << "struct" << h << "[label=\"" << binNode->left->data << "." << dictonary[binNode->left->data] << "\"color=blue]";
+                    os << "    " << "struct" << h << "[label=\"" << binNode->left->data << "." << binNode->left->height << "\"color=blue]";
                     os << "    " << "struct" << current_level << " -> " << "struct" << h << ";\n";
                     binNode->left->accept(this);
                     --h;
@@ -28,8 +27,7 @@ namespace Borodin {
                 if (binNode->right != nullptr)
                 {
                     ++h;
-                    dictonary[binNode->right->data]++;
-                    os << "    " << "struct" << h << "[label=\"" << binNode->right->data << "." << dictonary[binNode->right->data] << "\"color=red]";
+                    os << "    " << "struct" << h << "[label=\"" << binNode->right->data << "." <<binNode->right->height << "\"color=red]";
                     os << "    " << "struct" << current_level << " -> " << "struct" << h << ";\n";
                     binNode->right->accept(this);
                     --h;
@@ -38,8 +36,6 @@ namespace Borodin {
 
         public:
             TreePrinter(std::ostream& ostream) : os(ostream) {}
-
-            std::map<T, int> dictonary;
 
             int level = 0;
 
@@ -59,8 +55,7 @@ namespace Borodin {
                     os << "    " << node->data << ";\n";
                 else {
                     int level = 0;
-                    dictonary[node->data]++;
-                    os << "    " << "struct" << level << "[label=\"" << node->data << "." << dictonary[node->data] << "\",color=green]";
+                    os << "    " << "struct" << level << "[label=\"" << node->data << "." << node->height << "\",color=green]";
                     node->accept(this);
                 }
                 os << "}\n";

@@ -167,6 +167,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AVLTree.Tests\AVLTreeTests.cpp" />
+    <ClCompile Include="AVLTree.Tests\VisitorAVLTreeTests.cpp" />
+    <ClCompile Include="AVLTreeFixture\AVLTreeFixture.cpp" />
     <ClCompile Include="BinaryTree.Tests\BinaryTreeTest.cpp" />
     <ClCompile Include="BinaryTree.Tests\VisitorTreeTests.cpp" />
     <ClCompile Include="BinaryTreeFixture\BinaryTreeFixture.cpp" />
@@ -177,6 +180,7 @@
     <ClCompile Include="SourceFiles\AlgorithmsLib.Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AVLTreeFixture\AVLTreeFixture.hpp" />
     <ClInclude Include="BinaryTreeFixture\BinaryTreeFixture.hpp" />
     <ClInclude Include="SortFixture\SortFixture.h" />
     <ClInclude Include="SortFixture\SortTypes.hpp" />

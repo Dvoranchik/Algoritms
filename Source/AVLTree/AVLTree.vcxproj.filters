@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AVLTree">
+      <UniqueIdentifier>{ad2c3ead-276f-4f93-9a83-28ba6fa3a47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AVLNode">
+      <UniqueIdentifier>{a0c72bde-4eaa-495a-b521-ffd9e12cf8d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreePrinter">
+      <UniqueIdentifier>{d2ceb7b7-abc6-4db1-aa47-a8a2b0b82ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreeVisitor">
+      <UniqueIdentifier>{eeafce7a-e0c7-4535-8cb1-15fd5c3e02d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AVLNode\AVLNode.hpp">
+      <Filter>AVLNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLTree\AVLTree.hpp">
+      <Filter>AVLTree</Filter>
+    </ClInclude>
+    <ClInclude Include="TreePrinter\TreePrinter.hpp">
+      <Filter>TreePrinter</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeVisitor\TreeVisitor.hpp">
+      <Filter>TreeVisitor</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

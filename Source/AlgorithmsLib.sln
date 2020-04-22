@@ -9,9 +9,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgorithmsLib.Test", "Algor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryTree", "BinaryTree\BinaryTree.vcxproj", "{6C22B472-3003-4BFE-ACFD-AD991F9C9988}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimalBinarySearchTree", "OptimalBinarySearchTree\OptimalBinarySearchTree.csproj", "{29088111-4E38-48C9-A93D-DA07352EE39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptimalBinarySearchTree", "OptimalBinarySearchTree\OptimalBinarySearchTree.csproj", "{29088111-4E38-48C9-A93D-DA07352EE39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{7E104538-9056-478C-9E40-21B1058D69DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{7E104538-9056-478C-9E40-21B1058D69DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVLTree", "AVLTree\AVLTree.vcxproj", "{CC154E4E-1304-42A0-9954-8507CF7509A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,16 @@ Global
 		{7E104538-9056-478C-9E40-21B1058D69DD}.Release|x64.Build.0 = Release|Any CPU
 		{7E104538-9056-478C-9E40-21B1058D69DD}.Release|x86.ActiveCfg = Release|Any CPU
 		{7E104538-9056-478C-9E40-21B1058D69DD}.Release|x86.Build.0 = Release|Any CPU
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Debug|x64.ActiveCfg = Debug|x64
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Debug|x64.Build.0 = Debug|x64
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Debug|x86.ActiveCfg = Debug|Win32
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Debug|x86.Build.0 = Debug|Win32
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Release|Any CPU.ActiveCfg = Release|Win32
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Release|x64.ActiveCfg = Release|x64
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Release|x64.Build.0 = Release|x64
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Release|x86.ActiveCfg = Release|Win32
+		{CC154E4E-1304-42A0-9954-8507CF7509A8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

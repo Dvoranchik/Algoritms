@@ -1,4 +1,6 @@
 #pragma once
+#include "../TreeVisitor/TreeVisitor.hpp"
+
 
 namespace Borodin {
 	namespace AVLTree {
@@ -10,6 +12,10 @@ namespace Borodin {
                 Node* left;
                 Node* right;
                 int height;
+
+                void accept(TreeVisitor<T>* visitor) {
+                    visitor->visitAdd(this);
+                }
         };
 
 	}

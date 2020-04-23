@@ -12,25 +12,22 @@ namespace Borodin {
         class TreePrinter : public TreeVisitor<T>
         {
             std::ostream& os;
-            int h = 0;
             void visitBinaryTree(Node<T>* binNode)
             {
                 int current_level = level;
                 if (binNode->left != nullptr)
                 {
-                    ++h;
-                    os << "    " << "struct" << h << "[label=\"" << binNode->left->data << "." << binNode->left->height << "\"color=blue]";
-                    os << "    " << "struct" << current_level << " -> " << "struct" << h << ";\n";
+                    ++level;
+                    os << "    " << "struct" << level << "[label=\"" << binNode->left->key << "." << binNode->left->height << "\"color=blue]";
+                    os << "    " << "struct" << current_level << " -> " << "struct" << level << ";\n";
                     binNode->left->accept(this);
-                    --h;
                 }
                 if (binNode->right != nullptr)
                 {
-                    ++h;
-                    os << "    " << "struct" << h << "[label=\"" << binNode->right->data << "." <<binNode->right->height << "\"color=red]";
-                    os << "    " << "struct" << current_level << " -> " << "struct" << h << ";\n";
+                    ++level;
+                    os << "    " << "struct" << level << "[label=\"" << binNode->right->key << "." <<binNode->right->height << "\"color=red]";
+                    os << "    " << "struct" << current_level << " -> " << "struct" << level << ";\n";
                     binNode->right->accept(this);
-                    --h;
                 }
             }
 
@@ -52,10 +49,10 @@ namespace Borodin {
                 if (!node)
                     os << "\n";
                 else if (!node->right && !node->left)
-                    os << "    " << node->data << ";\n";
+                    os << "    " << "struct" << level << "[label=\"" << node->key << "." << node->height << "\",color=green]";
                 else {
                     int level = 0;
-                    os << "    " << "struct" << level << "[label=\"" << node->data << "." << node->height << "\",color=green]";
+                    os << "    " << "struct" << level << "[label=\"" << node->key << "." << node->height << "\",color=green]";
                     node->accept(this);
                 }
                 os << "}\n";

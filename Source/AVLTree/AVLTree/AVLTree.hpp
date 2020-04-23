@@ -12,24 +12,29 @@ namespace Borodin {
 
 			AVLTree(Node<T>* ptr = nullptr) :_root(ptr) {}
 
+			Node<T>* GetRoot();
+
 			void Insert(T key);
 			void Delete(T key);
-			void preOrder(Node<T>* root);
-			
+			void preOrder(std::string& str, Node<T>* root);
+			bool Find(T item);
+
 		private:
-
-			Node<T>* deleteNode(Node<T>* root, T key);
-
-			Node<T>* newNode(T key);
-			Node<T>* minValueNode(Node<T>* node);
-			Node<T>* insert(Node<T>* node, T key);
-			Node<T>* rightRotate(Node<T>* y);
-
 			int max(int a, int b);
 			int height(Node<T>* N);
 			int getBalance(Node<T>* N);
 
-			T _root;
+
+			Node<T>* deleteNode(Node<T>* root, T key);
+			
+			Node<T>* newNode(T key);
+			Node<T>* minValueNode(Node<T>* node);
+			Node<T>* insert(Node<T>* node, T key);
+			Node<T>* rightRotate(Node<T>* y);
+			Node<T>* leftRotate(Node<T>* x);
+			Node<T>* Find(Node<T>* ptr, T item);
+
+			Node<T>* _root;
 		};
 
 		template<typename T>
@@ -85,9 +90,15 @@ namespace Borodin {
 		}
 
 		template<typename T>
+		inline Node<T>* AVLTree<T>::GetRoot()
+		{
+			return _root;
+		}
+
+		template<typename T>
 		inline void AVLTree<T>::Insert(T key)
 		{
-			insert(_root, key)
+			_root = insert(_root, key);
 		}
 
 		template<typename T>
@@ -104,10 +115,9 @@ namespace Borodin {
 
 			if (key < node->key)
 				node->left = insert(node->left, key);
-			else if (key > node->key)
-				node->right = insert(node->right, key);
 			else
-				return node;
+				node->right = insert(node->right, key);
+
 
 			node->height = 1 + max(height(node->left),
 				height(node->right));
@@ -147,7 +157,7 @@ namespace Borodin {
 		}
 
 		template<typename T>
-		Node<T>* leftRotate(Node<T> * x)
+		inline Node<T>* AVLTree<T>::leftRotate(Node<T> * x)
 		{
 			Node<T>* y = x->right;
 			Node<T>* T2 = y->left;
@@ -238,13 +248,38 @@ namespace Borodin {
 			return root;
 		}
 		template<typename T>
-		inline void AVLTree<T>::preOrder(Node<T>* root)
+		inline void AVLTree<T>::preOrder(std::string& str, Node<T>* root )
 		{
-			if (root != NULL)
+			if (root == nullptr)
 			{
-				std::cout << root->key << " ";
-				preOrder(root->left);
-				preOrder(root->right);
+				return;
+			}
+			std::ostringstream ost;
+			ost << root->key;
+
+			preOrder(str, root->left);
+			str += ost.str();
+			preOrder(str, root->right);
+		}
+
+		template<typename T>
+		inline bool AVLTree<T>::Find(T item)
+		{
+			if (Find(_root, item) != nullptr)
+				return true;
+			return false;
+		}
+
+		template<typename T>
+		inline Node<T>* AVLTree<T>::Find(Node<T>* ptr, T item)
+		{
+			if (ptr == nullptr || item == ptr->key)
+				return ptr;
+			if (item < ptr->key) {
+				return Find(ptr->left, item);
+			}
+			else {
+				return Find(ptr->right, item);
 			}
 		}
 }

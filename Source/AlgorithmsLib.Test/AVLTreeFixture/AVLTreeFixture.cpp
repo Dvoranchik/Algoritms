@@ -60,7 +60,7 @@ namespace Borodin {
 
 		std::string Fixture::AVLTreeFixture::ExpectedResultGraphviz123()
 		{
-			std::ifstream in("ExpectedTreeFoGraphviz/ExpectedResultGraphviz123.txt");
+			std::ifstream in("ExpectedAVLTreeFoGraphviz/ExpectedResultGraphviz123.txt");
 			std::ostringstream out;
 			out << in.rdbuf();
 			return out.str();
@@ -68,7 +68,7 @@ namespace Borodin {
 
 		std::string Fixture::AVLTreeFixture::ExpectedResultGraphviz231()
 		{
-			std::ifstream in("ExpectedTreeFoGraphviz/ExpectedResultGraphviz231.txt");
+			std::ifstream in("ExpectedAVLTreeFoGraphviz/ExpectedResultGraphviz231.txt");
 			std::ostringstream out;
 			out << in.rdbuf();
 			return out.str();
@@ -76,7 +76,7 @@ namespace Borodin {
 
 		std::string Fixture::AVLTreeFixture::ExpectedResultGraphviz5324971869()
 		{
-			std::ifstream in("ExpectedTreeFoGraphviz/ExpectedResultGraphviz5324971869.txt");
+			std::ifstream in("ExpectedAVLTreeFoGraphviz/ExpectedResultGraphviz5324971869.txt");
 			std::ostringstream out;
 			out << in.rdbuf();
 			return out.str();
@@ -84,7 +84,7 @@ namespace Borodin {
 
 		std::string Fixture::AVLTreeFixture::ExpectedResultGraphviz_fidsadhysdl()
 		{
-			std::ifstream in("ExpectedTreeFoGraphviz/ExpectedResultGraphviz_fidsadhysdl.txt");
+			std::ifstream in("ExpectedAVLTreeFoGraphviz/ExpectedResultGraphviz_fidsadhysdl.txt");
 			std::ostringstream out;
 			out << in.rdbuf();
 			return out.str();

@@ -133,18 +133,6 @@ namespace Borodin
                 return l;
             }
 
-            static int sum(int[] freq, int i, int j)
-            {
-                int s = 0;
-                for (int k = i; k <= j; k++)
-                {
-                    if (k >= freq.Length)
-                        continue;
-                    s += freq[k];
-                }
-                return s;
-            }
-
             public OptimalTreeNode<T> construct_OBST(MatrixElement<T>[][] matrix, int i, int j, T[] keys, int[] prob)
             {
                 OptimalTreeNode<T> p;

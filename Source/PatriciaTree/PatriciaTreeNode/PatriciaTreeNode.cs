@@ -10,11 +10,6 @@ namespace Borodin
         public class PatriciaTreeNode: PatriciaTreeINode
         {
 
-            public void Accept(VisitorTree visitor)
-            {
-                visitor.visitBinaryTree(this);
-            }
-
             public PatriciaTreeNode(char data)
             {
                 this.data = data;

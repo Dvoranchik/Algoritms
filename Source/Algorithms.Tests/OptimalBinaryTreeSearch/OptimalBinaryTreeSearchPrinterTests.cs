@@ -2,7 +2,7 @@
 using Borodin.OptimalBinarySearchTree;
 using System.IO;
 
-namespace Algorithms.Tests
+namespace Algorithms.Tests.OptimalBinaryTree
 {
     public class PrinterTests
     {

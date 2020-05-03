@@ -6,7 +6,7 @@ namespace Borodin
 {
     namespace PatriciaTree
     {
-        class PatriciaTree
+        public class PatriciaTree
         {
             public PatriciaTree()
             {
@@ -18,7 +18,6 @@ namespace Borodin
                 return Keys[data] & mask[num - 1];
             }
 
-            /** function to search for an element **/
             public bool search(char k)
             {
 
@@ -28,7 +27,7 @@ namespace Borodin
                 else
                     return false;
             }
-            /** function to search for an element **/
+
             private PatriciaTreeNode search(PatriciaTreeNode t, char k)
             {
                 PatriciaTreeNode currentNode, nextNode;
@@ -41,7 +40,7 @@ namespace Borodin
                 while (nextNode.level > currentNode.level)
                 {
                     currentNode = nextNode;
-                    nextNode = (bit(k, nextNode.level)==1) ? nextNode.right : nextNode.left;
+                    nextNode = (bit(k, nextNode.level)==0) ? nextNode.left : nextNode.right;
                 }
                 return nextNode;
             }
@@ -51,7 +50,7 @@ namespace Borodin
             {
                 _root = insert(_root, ele);
             }
-            /** function to insert and element **/
+
             private PatriciaTreeNode insert(PatriciaTreeNode t, char ele)
             {
                 PatriciaTreeNode current, parent, lastNode, newNode;
@@ -80,14 +79,14 @@ namespace Borodin
                 while (current.level > parent.level && current.level < i)
                 {
                     parent = current;
-                    current = (bit(ele, current.level) == 1) ? current.right : current.left;
+                    current = (bit(ele, current.level) == 0) ? current.left : current.right;
                 }
 
                 newNode = new PatriciaTreeNode();
                 newNode.level = i;
                 newNode.data = ele;
-                newNode.left = (bit(ele, i)==1) ? current : newNode;
-                newNode.right = (bit(ele, i)==1) ? newNode : current;
+                newNode.left = (bit(ele, i)==0) ? newNode : current;
+                newNode.right = (bit(ele, i)==0) ? current : newNode;
 
                 if (current == parent.left)
                     parent.left = newNode;
@@ -107,6 +106,20 @@ namespace Borodin
                 {'щ',0b11001},{ 'ъ', 0b11010},{'ы', 0b11011},{ 'ь',0b11100},
                 {'э',0b11101},{'ю',0b11110},{'я', 0b11111},{'0',0}
             };
+
+
+            public void orderedPrint(PatriciaTreeNode tmp, int level)
+            {
+                if (tmp.level <= level)
+                {
+                    toPrint += tmp.data;
+                    return;
+                }
+                orderedPrint(tmp.left, tmp.level);
+                orderedPrint(tmp.right, tmp.level);
+            }
+
+            public string toPrint = "";
             private int[] mask = new int[5] {0b10000, 0b01000, 0b00100, 0b00010, 0b00001};
             public PatriciaTreeNode _root;
         }

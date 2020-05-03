@@ -9,10 +9,7 @@ namespace Borodin
     {
         public interface PatriciaTreeINode
         {
-            public abstract void Accept(VisitorTree visitor);
 
-            
         }
-
     }
 }

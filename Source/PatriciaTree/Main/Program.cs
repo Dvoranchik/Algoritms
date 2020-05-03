@@ -17,19 +17,8 @@ namespace Borodin
                 test.insert('ч'); 
                 test.insert('а');
                 test.insert('ю');
-
-               
-                //TreePrinter printer = new TreePrinter("Result_ABCD.txt");
-                //printer.VisitTreeNode(test._root);
-                //string result;
-                ////using (StreamReader sr = new StreamReader("ExpectedResultGraphviz_ABCD.txt"))
-                ////{
-                ////    expected = sr.ReadToEnd();
-                ////}
-                //using (StreamReader sr2 = new StreamReader("Result_ABCD.txt"))
-                //{
-                //    result = sr2.ReadToEnd();
-                //}
+                test.orderedPrint(test._root.left, 0);
+              
             }
         }
     }

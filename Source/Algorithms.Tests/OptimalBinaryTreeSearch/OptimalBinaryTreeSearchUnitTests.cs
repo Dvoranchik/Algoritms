@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Borodin.OptimalBinarySearchTree;
 
-namespace Algorithms.Tests
+namespace Algorithms.Tests.OptimalBinaryTree
 {
     public class OptimalBinaryTreeTests
     {
